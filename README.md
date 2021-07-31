@@ -1,16 +1,21 @@
-# Capstone Template for London Campus  
+# predict when the machine is in danger of failing.
+This exercise is based on a real world problem involving the operation and maintenance of a large machine in a factory. The machine has been observed to occasionally fail. This not only results in expensive repairs, but can also be potentially dangerous to the operators. So, our objective is to predict when the machine is in danger of failing.
 
-This repository is a boilerplate template for Flatiron School captstone projects.
-The idea here is that you can take this repository and use it as jumping off point to structure your project so you don't have to re-invent the wheel in terms of the organization of the project.
-If you don't like how this repo is organised, you don't have to stick to it, feel free to change it.
-That said, this format here is a tried and tested format that should work for you! 
+In order to be able to make predictions, we have at our disposal a number of measurements that are continuously recorded by sensors attached to the machine. Further, for each of those measurements, we also have a historical record of the health of the machine. We need to use this information to build a classifier which can be used to make predictions.
 
-The way to use this template is to just copy and paste the file structure (don't fork it, you don't want to be just manipulating a template!) to your new initialized repo and fill in things where they should go.
-We also suggest if you need direction to check out the `Project Checklist` markdown file  that is found in this repository as well as the [Capstone Questions](https://docs.google.com/document/d/11Otz1b2oRT3Xn0TK16X1o44hphGP4aBqdpARv0GWXBA/edit?usp=sharing) document for help building and assessing this project. 
-Both this boiler plate and the checklist were built simultaneously, so feel free to use them in tandem. 
+# Learning goals
 
-> Eventually you will delete everything above this line. This is just here to introduce the boilerplate. We also suggest deleting any other indentations like this. There are more there to get you thinking about the 'point' of the section. 
-# The Title of Your Project Goes Here 
+There are some very important learning goals within this exercise:
+
+**Feature encoding:** Some of the measurements are numerical and some are categorical i.e. Low/Medium/High. In order to build a classifier, the categorical measurements have to be converted to numerical ones.
+
+**Training / Testing split:** The only way to find out if a machine learning model is good is by feeding it with separately held test data and checking its actual performance against the expected accuracy based on the training set.
+
+**Scaling:** Machine learning models (usually) require all numerical features to have similar ranges. If the original features have dissimilar ranges, they must be rescaled to make them more similar.
+
+**Performance Evaluation:** How do we measure the effectiveness of a classifier? Having taken a lot of trouble to train a classifier, we need to be able to make predictions about how well it will perform on new, unseen data. We will introduce several metrics to measure performance.
+
+**Comparison of multiple classifiers:** It should become routine practice for you to try out several classification methods and summarize the results in an easily understandable way.
 
 One sentence summary goes here saying what you did.
 A second sentence goes here says why it matters.
